@@ -33,30 +33,78 @@ iCloud3 is available on the HACS and is installed using the same process as othe
 
 ------
 
-## Installing iCloud3 Development Version (Beta)
+## Installing iCloud3 Beta Versions
 
-New features are added to iCloud3 Development Version before they are released to the General Availability version on HACS. This Beta version can be added to HACS as a Custom Repository. Follow the instructions below:
+- This is effective with iCloud3 v3.8.0
 
-- **Adding the iCloud3 Development Edition to HACS**
+Beta versions of iCloud3 are published as **pre-releases** in the iCloud3 repository (`gcobb321/icloud3`). HACS and Marketplace only offer them when the iCloud3 **Pre-release** switch is turned on.
 
-  1. Open HACS
-  2. Select the 3-dots in the upper-right corner, then select *Custom Repositories*.
-  3. Enter the following values in the fields displayed:
-     - Repository: `gcobb321/icloud3_v3`
-     - Category: `Integration`
-  4. Select **Add**
+### Turn on beta versions  (Enable Beta Downloads)
 
-  ![](../images/hacs-add-ic3-custom-repo.png)
+- Using iCloud3 Configure Screen:
+  1. Go to **Configure > Tools > Enable/Disable Beta Downloads.**
+  2. Select **Enable Beta Downloads**, then **Submit**
 
-  *Notes*:
+- Using the Marketplace Configuration update screen:
 
-  1. Additional information in the HACS User Guide can be found [here](https://www.hacs.xyz/docs/faq/custom_repositories/?h=reposit).
+  1. Go to **Settings > Devices & Services**, select **Devices** at the top of the screen
 
-  2. Monitor the gcobb321/icloud3_v3 Issues page for an announcement that a new release is available.
+  2. Type **Marketplace** in the Search field and find the **iCloud3 Apple Device Tracker** entry. **Click on it** to select it.
 
-  3. Download the *icloud3.v3.x.x.zip* file from the *gcobb321/icloud3_v3 iCloud3 GitHub Repository Releases* page [here](https://github.com/gcobb321/icloud3_v3/releases). Follow the Manual instructions above.
+  3. In the **Configuration** section, find the **Pre-release** switch.
+
+  4. If the switch isn't listed, it's disabled. Select **+1 entity not shown**, then the **Pre-release entity**, then **Settings (gear) > Enabled > Update**. It can take up to 30 seconds to appear.
+
+  5. Turn the **Pre-release** switch on.
+
+### Go back to only show the production versions (Disable Beta Downloads)
+
+- Using iCloud3 Configure Screen:
+
+  1. Go to **Configure > Tools > Enable/Disable Beta Downloads.**
+  2. Select **Disable Beta Downloads**, then **Submit**
+
+- Using the Marketplace Configuration update screen:
+
+  1. Open the Marketplace iCloud Configuration screen (Steps 1-3 above). 
+
+  2. Turn the **Pre-release** switch off.  The beta you have stays installed. HACS/Marketplace won't downgrade it, and will offer the next production version once it's newer than your beta. If you need to go back right away, use **Redownload** in HACS/Marketplace and pick the production version.
+
+#### Notes
+- Only one copy of iCloud3 can be installed (`custom_components/icloud3`). Don't add the old `icloud3_v3` repository. Marketplace won't install it alongside iCloud3.
+- Beta versions are tagged like `v3.8.0-beta.3`. In the iCloud3 Event Log and the update entity, a beta version is older than the production release with the same number (e.g., `3.8.0-beta.3` comes before `3.8.0`).
 
 
+
+## Resetting the old HACS iCloud3 Beta/Development Custom Repository
+iCloud3 beta versions are now published as **pre-releases in the main iCloud3 repository** (`gcobb321/icloud3`). The separate beta repository (`gcobb321/icloud3_v3`) is being retired.
+
+Home Assistant 2026.11 introduced the  **Marketplace** integration that replaces HACS. With Marketplace, a domain (`iCloud3`) can only be tied to one GitHub Repository (`gcobb321/icloud3`). HACS, on the other hand, did not have this limitation and would support multiple repos (`gcobb321/icloud3 and icloud3_v3`).
+
+The multiple repository support provided by HACS needs to be undone. Do one of the following;
+
+#### From the Repair Issue: *iCloud3: Beta Versions are moving to the iCloud3 Repo* 
+
+1. Go to **Settings > Repairs** and select the issue.
+2. Select **Submit**.
+
+iCloud3 then switches your HACS or Marketplace installation from the beta repository to the iCloud3 repository. You don't need to reinstall anything or set iCloud3 up again. It also:
+- Removes the *iCloud3 Beta* repository entry.
+- Turns on the **Pre-release** switch for iCloud3, so you keep getting new beta versions.
+- Leaves your iCloud3 configuration, devices and entities unchanged.
+
+#### If the switch can't be done automatically
+
+The Repairs dialog shows a message instead. Make the change manually:
+1. **Settings > Devices & Services > iCloud3 > Delete**. Your iCloud3 configuration is saved and will be used again.
+2. In HACS or Marketplace, uninstall **iCloud3 Beta**.
+3. In HACS or Marketplace, open **iCloud3** and turn on its **Pre-release** switch (see *Installing beta versions*), then download the latest version.
+4. Restart Home Assistant.
+5. **Settings > Devices & Services > Add Integration > iCloud3**.
+
+#### If you installed from the iCloud3 repository
+
+You don't need to do anything. To try beta versions, see *Installing beta versions* in the iCloud3 documentation.
 
 ------
 ## Add the iCloud3 Integration
