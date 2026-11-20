@@ -5,19 +5,19 @@
   <title>iCloud3 v3</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="iCloud3 Documentation" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <!--
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/docsify-accordion/src/style.css">
-  <link rel="stylesheet" href="./theme-toc.css">
-  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./theme-vue-min.css">
+  <!-- Docsify 5 core stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@5.1.0/dist/themes/core.min.css">
+
+  <!-- Docsify 5 Vue theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@5.1.0/dist/themes/addons/vue.min.css">
+
+  <!-- Gary's original custom styles -->
   <link rel="stylesheet" href="./theme-mods.css">
   <link rel="stylesheet" href="./theme-accordion.css">
-
+  <link rel="stylesheet" href="./theme-docsify5.css">
 </head>
-
 <body>
   <div id="app"></div>
 
@@ -37,14 +37,22 @@
       relativePath: false,
       maxDepth: 3,
       subMaxLevel: 2,
-      search: 'auto',
-      themeColor: '#64A1E4',
+      search: {
+        paths: 'auto',
+        placeholder: 'Search iCloud3 documentation',
+        noData: 'No results found',
+        depth: 6,
+        maxAge: 3600000,
+        namespace: 'icloud3-v5-clean',
+        resultSource: 'breadcrumb'
+      },
       plugins: []
-    }
-
+    };
   </script>
 
-  <script src="./docsify-main-v4.13.1.min.js"></script>
+  <script src="./search-enhancements.js?v=2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@5.1.0/dist/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@5.1.0/dist/plugins/search.min.js"></script>
   <script src="./docsify-accordion.js"></script>
   <script src="./docsify-copy-code.js"></script>
   <script src="./docsify-edit-on-github.js"></script>
