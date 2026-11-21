@@ -1,0 +1,165 @@
+/* Docsify 5 compatibility styles for the original iCloud3 theme. */
+
+:root {
+  --content-max-width: 800px;
+  --content-margin-inline: 15px;
+  --theme-color: #64a1e4;
+}
+
+/* Search-term highlighting applied by search-enhancements.js. */
+mark.icloud3-search-hit {
+  background-color: #ffe16a;
+  color: #202020;
+  border-radius: 3px;
+  padding: 0 2px;
+  box-shadow: 0 0 0 1px rgba(180, 140, 0, 0.15);
+}
+
+/* Let the 800px document width shrink on narrow viewports. */
+.markdown-section {
+  width: auto;
+}
+
+/* Preserve the compact sidebar layout used by the Docsify 4 theme. */
+.sidebar .sidebar-nav {
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.sidebar .sidebar-nav ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.sidebar-nav li,
+.sidebar-nav li a {
+  line-height: 1.45;
+}
+
+.sidebar-nav li {
+  margin: 0;
+}
+
+.sidebar-nav li a {
+  padding: 0;
+}
+
+.sidebar-nav > p,
+.sidebar-nav > ul > li > p {
+  margin: 10px 0 3px;
+  padding: 0;
+}
+
+.sidebar .sidebar-nav > p,
+.sidebar .sidebar-nav > p strong,
+.sidebar .sidebar-nav > p u,
+.sidebar .sidebar-nav > p a {
+  color: #047eee !important;
+}
+
+.sidebar-nav img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar-nav a[href*="buymeacoffee"] img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 8px auto;
+}
+
+.sidebar .sidebar-nav ul.app-sub-sidebar {
+  margin: 0;
+  padding-left: 20px !important;
+}
+
+.sidebar .sidebar-nav ul.app-sub-sidebar > li {
+  position: relative;
+  margin-left: 0 !important;
+  padding-left: 10px;
+}
+
+.sidebar .sidebar-nav ul.app-sub-sidebar > li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: none !important;
+  width: 12px;
+  padding: 0;
+  content: "-";
+}
+
+.sidebar .sidebar-nav hr {
+  height: 0;
+  margin: 8px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid #999 !important;
+}
+
+/* Keep the original red hamburger fixed at the lower-left corner. */
+body .sidebar-toggle {
+  position: fixed !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 9999 !important;
+  width: 44px !important;
+  height: 40px !important;
+  padding: 10px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  translate: none !important;
+  transform: none !important;
+}
+
+body .sidebar-toggle .sidebar-toggle-button {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  background: transparent !important;
+  transform: none !important;
+}
+
+body .sidebar-toggle .sidebar-toggle-button span {
+  display: block !important;
+  width: 18px !important;
+  height: 2px !important;
+  min-height: 2px !important;
+  margin: 2px 0 !important;
+  background-color: red !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+/* Match the compact, neutral code blocks from the original theme. */
+.markdown-section pre[data-lang] {
+  margin: 5px 0 !important;
+  padding: 0 !important;
+  line-height: 1.1rem !important;
+  background-color: #f8f8f8 !important;
+  border-radius: 0 !important;
+}
+
+.markdown-section pre[data-lang] > code {
+  padding: 10px 14px !important;
+  color: #444 !important;
+  font-size: 13px !important;
+  line-height: 1.1rem !important;
+  background: transparent !important;
+}
+
+.markdown-section pre[data-lang] code .token {
+  color: inherit !important;
+  font-weight: inherit !important;
+  font-style: normal !important;
+}
+
+.markdown-section pre[data-lang]::after {
+  display: none !important;
+}

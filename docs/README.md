@@ -1,5 +1,6 @@
-#  <img width="32" height="32" src="https://brands.home-assistant.io/icloud3/icon.png"> iCloud3 Apple Device Tracker
+<img width="32" height="32" src="https://brands.home-assistant.io/icloud3/icon.png">
 
+# iCloud3 Apple Device Tracker
 
 
 ![][release-shield] ![](https://img.shields.io/badge/Released-November,_2026-mediumseagreen.svg) ![][release-downloads-shield] ![GitHub Stars][stars-shield]<br>
