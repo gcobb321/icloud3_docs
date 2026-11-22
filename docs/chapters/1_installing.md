@@ -132,7 +132,7 @@ Generally, when you click the Gear icon in the above image to open the iCloud3 C
 3. The devices in your Apple account were downloaded when you signed in. They are analyzed and iCloud3 device items were created for you to import. The *Import Apple Devices* screen is displayed with these device items categorized into tracked devices (iPhone, Watch), monitored devices (iPad, Mac) and inactive devices (all others). Import the tracked and monitored devices and the iCloud3 device_tracker and sensor entities are created.  Note: Tracked devices are actively located, Monitored devices use data downloaded with tracked devices.
 4. After importing, the *iCloud3 Devices* screen is displayed. You can edit the created devices (Name, Picture, Mobile App assignment, etc) if necessary.
 5. End the *iCloud3 Configure Session* (select Menu, then Exit).
-6. The *iCloud3 Dashboard* is created and added to the *HA Sidebar*. Click the Cloud icon (<img src="../dashboard/cloud-icon-42x42.png" width="20" height="16">) to display your devices and the *Event Log*.
+6. The *iCloud3 Dashboard* is created and added to the *HA Sidebar*. Click the Cloud icon (<img src="../images2/cloud-icon-42x42.png" width="20" height="16">) to display your devices and the *Event Log*.
 
 That's it, you are done! Each of these steps is described in detail below.
 
@@ -260,7 +260,7 @@ Thanks and good luck!
 
 *And if you like iCloud3, maybe you could get me a cup of coffee*
 
-<a href="https://www.buymeacoffee.com/gcobb321" target="_blank"><img src="https://gcobb321.github.io/icloud3_v3_docs/screens/other/buymeacoffee-docs-button.png"/></a>
+<a href="https://www.buymeacoffee.com/gcobb321" target="_blank"><img src="../images/buymeacoffee-docs-button.png"/></a>
 
 
 -----
