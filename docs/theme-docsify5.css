@@ -20,6 +20,11 @@ mark.icloud3-search-hit {
   width: auto;
 }
 
+/* Prevent the final divider from overlapping a following page signature. */
+.markdown-section hr:has(+ p:last-child) {
+  margin-bottom: 0;
+}
+
 /* Preserve the compact sidebar layout used by the Docsify 4 theme. */
 .sidebar .sidebar-nav {
   padding-left: 15px;
